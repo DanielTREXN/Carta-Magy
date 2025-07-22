@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ec76b3, #ff11b07e, #f3729d);
+    color: #d93c9a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.love-letter {
+    background: rgba(255, 255, 255, 0.741);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.love-letter::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, #ff6699, #ff0066);
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #ff0066;
+    margin-bottom: 20px;
+}
+
+.photo-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hearts-overlay::before {
+    content: "❤️";
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1s infinite;
+    opacity: 0.6;
+}
+
+.letter-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.reveal-button {
+    background: linear-gradient(45deg, #ff0066, #ff6699);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(255, 0, 102, 0.3);
+    transition: all 0.3s;
+}
+
+.reveal-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 0, 102, 0.4);
+}
+
+.heart {
+    margin-left: 10px;
+    animation: pulse 1s infinite;
+}
+
+#extra-messages {
+    margin-top: 20px;
+}
+
+.hidden-message {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+    margin-bottom: 10px;
+    color: #ff6699
+
+}
+
+.text-unico{
+    color:#ff6699
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#floatingHearts {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    overflow: visible;
+}
+
+.heart-animate {
+    position: fixed;
+    user-select: none;
+    animation-name: float;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-50vh) scale(1.3) rotate(15deg);
+    }
+
+    100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

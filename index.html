@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carta para mi Amor ❤️</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="love-letter">
+        <h1 class="title">No sé si esto es cursi o valiente... pero es para ti</h1>
+
+        <div class="photo-container" onclick="showSpecialMessage()">
+            <img src="magy.jpg" alt="Mi amor" class="photo" />
+            <div class="hearts-overlay"></div>
+        </div>
+
+        <div class="letter-content">
+            <strong>Magy, Aunque recién nos estamos conociendo, hay algo en ti que me hace querer
+                saber más,
+                descubrir cada detalle y disfrutar cada momento juntos. Tu sonrisa ilumina mi día y tu forma de ser me
+                inspira a ser mejor.<br></strong>💌💖🌷<br />
+        </div>
+
+        <button class="reveal-button" onclick="toggleMessages()">
+            <span class="btn-text" id="btn-text"><strong>¡Descubre más!</strong></span>
+            <span class="heart">❤️</span>
+        </button>
+
+        <div id="extra-messages" style="display: none;">
+            <p class="hidden-message">
+                <strong class="text-unico">El capybara que te regalé no es solo un peluche adorable, es mi mensajero secreto: representa calma,
+                cariño y esa compañía tranquila que siempre quiero darte, incluso en los días más locos. 🐾✨</strong>
+            <p class="hidden-message">💖Ohh ño💖</p>
+            <p class="hidden-message">Estoy aquí para ser tu constante en este código de la vida,  
+el debug que elimina tus dudas,  
+el commit que guarda cada momento juntos,  
+y el algoritmo que hace que cada día contigo sea mágico.  
+Contigo, todo funciona mejor.
+                🌟✨</p>
+        </div>
+    </div>
+
+    <div id="floatingHearts"></div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
